@@ -30,3 +30,29 @@ p{
 J h3{
   margin-left: 140;
 }
+
+ul1{
+  list-style: square;
+  line-height: 1.5;
+}
+
+ul1 li{
+  font-family: 'Courier New';
+}
+
+#educacion{
+  border: 3px solid blue;
+  font-family: 'Courier New';
+}
+
+#experiencia{
+  border: 3px solid red;
+}
+
+#proyectos{
+  border: 3px solid green;
+}
+
+img{
+  border: 5px solid rgb(62, 223, 186)
+}
