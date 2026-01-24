@@ -228,6 +228,7 @@ caption{
   font-size: 25px;
   grid-column: 1;
 }
+
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 
 /* Móviles: 0 - 480px */
@@ -282,7 +283,7 @@ caption{
   }
 }
 
-/* Tablets,ipads: 481px - 768px */
+/* Tablets: 481px - 768px */
 @media (min-width: 481px) and (max-width: 768px) {
   .layout{
     max-width: 100%;
@@ -307,4 +308,14 @@ caption{
     grid-template-columns: 1fr 1fr;
     gap: 18px;
   }
+}
+
+/* Laptops: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1{ font-size: 54px; }
+}
+
+/* Desktops grandes: 1025px - 1440px+ */
+@media (min-width: 1025px) {
+  header h1{ font-size: 60px; }
 }
