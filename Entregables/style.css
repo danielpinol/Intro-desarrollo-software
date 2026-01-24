@@ -92,7 +92,6 @@ body{
   background: rgb(201, 208, 245);
   padding: 5px;
   border-radius: 12px;
-  border-color: 2px solid blue;
 }
 
 table{
@@ -228,4 +227,57 @@ caption{
   margin: 10px;
   font-size: 25px;
   grid-column: 1;
+}
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Móviles: 0 - 480px */
+@media (max-width: 480px) {
+  .layout{
+    max-width: 100%;
+    margin: 12px;
+    padding: 12px;
+    grid-template-columns: 1fr; /* 1 columna */
+    column-gap: 0;
+    row-gap: 12px;
+  }
+
+  header h1{
+    font-size: 32px;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav a{
+    margin: 0;
+  }
+
+  /* Foto debajo, en 1 columna */
+  .photo{
+    grid-column: 1;
+    grid-row: auto;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  #acerca_de_mi h2,
+  #experiencia-relevante h2,
+  #educacion h2,
+  #skills_certificaciones h2{
+    font-size: 24px;
+  }
+
+  #acerca_de_mi p,
+  #experiencia-relevante ul{
+    font-size: 16px;
+  }
+
+  /* Skills y certificaciones en 1 columna */
+  .skills-cert-cols{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
