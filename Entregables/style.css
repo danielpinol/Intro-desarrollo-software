@@ -281,3 +281,30 @@ caption{
     gap: 12px;
   }
 }
+
+/* Tablets,ipads: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .layout{
+    max-width: 100%;
+    margin: 18px;
+    padding: 16px;
+    grid-template-columns: 2fr 1fr;
+    row-gap: 16px;
+  }
+
+  header h1{
+    font-size: 42px;
+  }
+
+  #acerca_de_mi h2,
+  #experiencia-relevante h2,
+  #educacion h2,
+  #skills_certificaciones h2{
+    font-size: 28px;
+  }
+
+  .skills-cert-cols{
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
