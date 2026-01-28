@@ -10,8 +10,25 @@
     border-bottom: 2px dashed black;
 }
 
-.photo_border_decoration {
+.photo_border_decoration{
   border: 4px solid rgb(32, 27, 130);
   border-radius: 16px;
   padding: 2px;
+}
+
+.btn.btn_color{
+    background-color: rgb(16, 1, 62);
+    color: rgb(255, 255, 255);
+}
+
+.header_color{
+    color: rgb(16, 1, 62);
+}
+
+.sub_headers_color{
+    color: rgb(12, 29, 105)
+}
+
+.text_justify{
+    text-align: justify;
 }
