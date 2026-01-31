@@ -33,3 +33,9 @@
 .text_justify{
     text-align: justify;
 }
+
+.gradient_box {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  box-shadow: 0 15px 30px rgba(221, 36, 118, 0.35);
+  border-radius: 12px;
+}
