@@ -7,6 +7,16 @@
     --borde: rgba(255,255,255,.14);
 }
 
+/* LIGHT MODE  */
+.light{
+  --fondo_pantalla: #dadce7;
+  --fondo_contenedor: #ffffff;
+  --color_texto: #05060b;
+  --texto_secundario: rgba(5,6,11,.70);
+  --borde: rgba(0,0,0,.12);
+}
+
+
 .color_cv{
     background-color: var(--fondo_pantalla);
     color: var(--color_texto);
@@ -238,6 +248,81 @@ section{
   line-height: 1.8;
 }
 
-/*EDUCACION*/
+/*BOTON EXPERIENCIA RELEVANTE*/
+
+/* TOGGLE EXPERIENCIA */
+.toggle_content{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.toggle_content.show{
+  max-height: 900px; 
+  opacity: 1;
+  margin-top: 12px;
+}
 
 
+.toggle_btn{
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle_btn::after{
+  content: " > ";
+  font-size: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.toggle_btn.active::after{
+  transform: rotate(90deg);
+}
+
+
+
+.toggle_contents{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.toggle_contents.show{
+  max-height: 900px; 
+  opacity: 1;
+  margin-top: 12px;
+}
+
+
+.toggle_btns{
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle_btns::after{
+  content: " > ";
+  font-size: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.toggle_btns.active::after{
+  transform: rotate(90deg);
+}
+
+/*PLACEHOLDER*/
+#skillSearch{
+  border: 1px solid var(--contraste);
+  background: rgba(255,255,255,0.03);
+  color: var(--color_texto);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+#skillSearch::placeholder{
+  color: var(--texto_secundario);
+}
+
+.skill-hidden{
+  display: none;
+}
