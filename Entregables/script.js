@@ -66,3 +66,23 @@ toggleBtns.addEventListener("click", () => {
   toggleContents.classList.toggle("show");
   toggleBtns.classList.toggle("active");
 });
+
+
+// BUSCADOR DE SKILLS
+const skillSearch = document.getElementById("skillSearch");
+const skillsList = document.getElementById("skillsList");
+const skillItems = skillsList.querySelectorAll("li");
+
+skillSearch.addEventListener("input", () => {
+  const query = skillSearch.value.trim().toLowerCase();
+
+  skillItems.forEach((li) => {
+    const text = li.textContent.toLowerCase();
+
+    if (text.includes(query)) {
+      li.classList.remove("skill-hidden");
+    } else {
+      li.classList.add("skill-hidden");
+    }
+  });
+});

@@ -311,4 +311,18 @@ section{
   transform: rotate(90deg);
 }
 
+/*PLACEHOLDER*/
+#skillSearch{
+  border: 1px solid var(--contraste);
+  background: rgba(255,255,255,0.03);
+  color: var(--color_texto);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
 
+#skillSearch::placeholder{
+  color: var(--texto_secundario);
+}
+
+.skill-hidden{
+  display: none;
+}
