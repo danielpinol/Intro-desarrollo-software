@@ -48,3 +48,12 @@ modeBtn.addEventListener("click", () => {
     modeBtn.textContent = "Light mode";
   }
 });
+
+// BOTON EXPERIENCIA RELEVANTE
+const toggleBtn = document.querySelector(".toggle_btn");
+const toggleContent = document.querySelector(".toggle_content");
+
+toggleBtn.addEventListener("click", () => {
+  toggleContent.classList.toggle("show");
+  toggleBtn.classList.toggle("active");
+});

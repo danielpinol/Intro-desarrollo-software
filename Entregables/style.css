@@ -248,6 +248,37 @@ section{
   line-height: 1.8;
 }
 
-/*EDUCACION*/
+/*BOTON EXPERIENCIA RELEVANTE*/
+
+/* TOGGLE EXPERIENCIA */
+.toggle_content{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.toggle_content.show{
+  max-height: 900px; 
+  opacity: 1;
+  margin-top: 12px;
+}
+
+
+.toggle_btn{
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle_btn::after{
+  content: " > ";
+  font-size: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.toggle_btn.active::after{
+  transform: rotate(90deg);
+}
+
 
 
