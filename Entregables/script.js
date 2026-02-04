@@ -33,3 +33,18 @@ const message = `▓▒░ ▸ ${saludo} // FELIZ_${days[day].toUpperCase()} ▸
 
 // aqui ya solo metemos el mensaje que queramos en donde queramos
 bar.textContent = message;
+
+
+// DARK/LIGHT MODE
+const modeBtn = document.getElementById("dark_mode");
+const page = document.querySelector(".color_cv");
+
+modeBtn.addEventListener("click", () => {
+  page.classList.toggle("light");
+
+  if (page.classList.contains("light")) {
+    modeBtn.textContent = "Dark mode";
+  } else {
+    modeBtn.textContent = "Light mode";
+  }
+});
