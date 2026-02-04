@@ -282,3 +282,33 @@ section{
 
 
 
+.toggle_contents{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.toggle_contents.show{
+  max-height: 900px; 
+  opacity: 1;
+  margin-top: 12px;
+}
+
+
+.toggle_btns{
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle_btns::after{
+  content: " > ";
+  font-size: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.toggle_btns.active::after{
+  transform: rotate(90deg);
+}
+
+

@@ -49,11 +49,20 @@ modeBtn.addEventListener("click", () => {
   }
 });
 
-// BOTON EXPERIENCIA RELEVANTE
+// BOTON CONTACT
 const toggleBtn = document.querySelector(".toggle_btn");
 const toggleContent = document.querySelector(".toggle_content");
 
 toggleBtn.addEventListener("click", () => {
   toggleContent.classList.toggle("show");
   toggleBtn.classList.toggle("active");
+});
+
+// BOTON EXPERIENCIA RELEVANTE
+const toggleBtns = document.querySelector(".toggle_btns");
+const toggleContents = document.querySelector(".toggle_contents");
+
+toggleBtns.addEventListener("click", () => {
+  toggleContents.classList.toggle("show");
+  toggleBtns.classList.toggle("active");
 });
