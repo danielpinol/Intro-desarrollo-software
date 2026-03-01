@@ -1,0 +1,21 @@
+<div class="text-center mb-5">
+  <h1 class="title code_font mb-2">
+    DANIEL_PIÑOL<span class="cursor"></span>
+  </h1>
+  <div class="divisor mb-4"></div>
+
+  <button class="toggle_btn" [class.active]="showContact" (click)="toggleContact()">
+    Contact
+  </button>
+  <div class="toggle_content" [class.show]="showContact">
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a class="decoration_links" href="mailto:daniel.pinol@ufm.edu">mail</a>
+      <a class="decoration_links" href="https://github.com/danielpinol" target="_blank">gitHub profile</a>
+      <a class="decoration_links" href="https://www.linkedin.com/" target="_blank">linkedin</a>
+    </div>
+  </div>
+</div>
+
+<button id="dark_mode" class="decoration_links dark_light_btn" (click)="toggleDarkMode()">
+  {{ isDarkMode ? 'Light mode' : 'Dark mode' }}
+</button>
