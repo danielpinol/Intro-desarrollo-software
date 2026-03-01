@@ -1,10 +1,10 @@
 :root{
-    --fondo_pantalla: #05060b;
-    --fondo_contenedor: #0b0f16;
-    --color_texto: #ffffff;
-    --texto_secundario: rgba(255,255,255,.70);
-    --contraste: #00e5ff;
-    --borde: rgba(255,255,255,.14);
+  --fondo_pantalla: #05060b;
+  --fondo_contenedor: #0b0f16;
+  --color_texto: #ffffff;
+  --texto_secundario: rgba(255,255,255,.70);
+  --contraste: #00e5ff;
+  --borde: rgba(255,255,255,.14);
 }
 
 /* LIGHT MODE  */
@@ -17,14 +17,14 @@
 }
 
 .color_cv{
-    background-color: var(--fondo_pantalla);
-    color: var(--color_texto);
+  background-color: var(--fondo_pantalla);
+  color: var(--color_texto);
 }
 
 .container_color{
-    background-color: var(--fondo_contenedor);
-    border: 1px solid var(--borde);
-    padding: 24px;
+  background-color: var(--fondo_contenedor);
+  border: 1px solid var(--borde);
+  padding: 24px;
 }
 
 .photo_border_decoration{
@@ -60,7 +60,7 @@ section{
 }
 
 .code_font{
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .topbar{
@@ -346,3 +346,4 @@ section{
 .skill-hidden{
   display: none;
 }
+

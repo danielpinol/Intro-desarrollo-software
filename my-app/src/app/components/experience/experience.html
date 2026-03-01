@@ -1,0 +1,35 @@
+<section class="mb-3">
+  <h2 class="subheader h2 pb-2 mb-1 toggle_btns" 
+      [class.active]="showExperience" 
+      (click)="toggleExperience()">
+    Experiencia Relevante >
+  </h2>
+
+  <div [class.show]="showExperience" class="toggle_contents">
+    <div class="card">
+      <div class="exp_title">
+        <h3 class="role">Entrenador de Fútbol</h3>
+        <p class="time">6 meses</p>
+      </div>
+      <p class="company">Global Sports Corporation / Global Soccer Academy</p>
+      <ul class="list">
+        <li>Entrenador en academia trabajando con niños.</li>
+        <li>Gestión de dos equipos distintos.</li>
+        <li>Desarrollo de disciplina, técnica y trabajo en equipo.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="exp_title">
+        <h3 class="role">Modelo para anuncios publicitarios</h3>
+        <span class="time">2015 - 2018</span>
+      </div>
+      <p class="company">Fashion Icons / Marcela Tanchez</p>
+      <ul class="list">
+        <li>Participación en campañas publicitarias para marcas locales.</li>
+        <li>Trabajo bajo lineamientos de marca y tiempos de producción.</li>
+        <li>Colaboración con equipos creativos.</li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+<section class="mb-3">
+  <h2 class="subheader h2 pb-2 mb-1">Educación</h2>
+  <div class="card">
+    <div class="mb-3">
+      <h3 class="role">Bachiller en Ciencias y Letras</h3>
+      <p class="company">Colegio Internacional Montessori, Guatemala</p>
+      <span class="text-muted">Graduado · 2023</span>
+    </div>
+    <div>
+      <h3 class="role">Licenciatura en Ingeniería en Computer Science</h3>
+      <p class="company">Universidad Francisco Marroquín</p>
+      <span class="text-muted">En curso · 2025 – Actualidad</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="subheader h2 pb-2 mb-1">Skills & Certificaciones</h2>
+  <input
+    type="text"
+    class="form-control mb-3"
+    placeholder="Buscar skill..."
+    [(ngModel)]="searchQuery"
+  />
+  <div class="row g-4">
+    <div class="col-12 col-md-6">
+      <h3 class="h4 fw-bold mb-1">Skills</h3>
+      <ul class="fs-5">
+        <li *ngFor="let skill of filteredSkills">{{ skill }}</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-6">
+      <h3 class="h4 fw-bold mb-1">Certificaciones</h3>
+      <ul class="fs-5">
+        <li>Microsoft Power BI</li>
+        <li>Microsoft Excel</li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,112 @@
+
+.topbar{
+  display: flex;              
+  gap: 8px;                   
+  margin-bottom: 20px;        
+}
+
+.color_dots{
+  width: 10px;            
+  height: 10px;
+  border-radius: 50%;         
+  background-color: var(--contraste);
+  box-shadow: 0 0 10px var(--contraste);
+  opacity: 0.85;              
+}
+
+.decoration_bar{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  color: var(--texto_secundario);
+  border: 1px solid var(--borde);
+  background: rgba(255,255,255,0.03);
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 0 2px var(--contraste);
+}
+
+.title{
+  font-size: 4.8rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;  
+  color: var(--color_texto);
+}
+
+.code_font{
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.cursor{
+  display: inline-block;
+  width: 20px;
+  height: 1.2em;
+  background: var(--contraste);
+  margin-left: 4px;
+  vertical-align: bottom;
+  animation: blink 1.1s steps(2, start) infinite;
+}
+
+@keyframes blink{
+  to{
+    visibility: hidden;
+  }
+}
+
+.divisor{
+  width: 700px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--contraste),
+    transparent
+  );
+  margin: 5px auto;
+  opacity: 0.9;
+}
+
+.toggle_btn{
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--contraste);
+}
+
+.toggle_btn::after{
+  content: " > ";
+  font-size: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.toggle_content{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.toggle_content.show{
+  max-height: 900px; 
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.decoration_links{
+  display: inline-block;  
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border: 1px solid var(--contraste);
+  border-radius: 999px;
+  color: var(--contraste);
+  text-decoration: none;
+  transition: background 0.2s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.decoration_links:hover{
+  background: var(--fondo_pantalla-soft);
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px var(--contraste);
+}
