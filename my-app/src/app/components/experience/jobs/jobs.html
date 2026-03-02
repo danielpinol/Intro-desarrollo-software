@@ -1,0 +1,6 @@
+<div class="card mt-3">
+  <h3 class="role">Lista de trabajos</h3>
+  <ul class="list">
+    <li *ngFor="let job of jobs">{{ job | capitalize | uppercase }}</li>
+  </ul>
+</div>

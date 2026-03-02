@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { ViewEncapsulation } from '@angular/core';
+import { DataService } from '../../services/data';
 
 @Component({
   selector: 'app-education-skills',
@@ -12,14 +13,11 @@ import { ViewEncapsulation } from '@angular/core';
 })
 export class EducationSkills {
   searchQuery = '';
+  skills: string[];
 
-  skills = [
-    'Programación',
-    'Microsoft Office',
-    'Trabajo en equipo',
-    'Liderazgo',
-    'Inteligencia Artificial'
-  ];
+  constructor(private dataService: DataService) {
+    this.skills = dataService.skills;
+  }
 
   get filteredSkills() {
     return this.skills.filter(skill =>

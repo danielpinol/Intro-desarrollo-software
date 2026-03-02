@@ -12,9 +12,16 @@
     <div class="decoration_bar">{{ barMessage }}</div>
 
     <app-header></app-header>
-    <app-about></app-about>
-    <app-experience></app-experience>
-    <app-education-skills></app-education-skills>
+
+    <!-- NAVEGACION -->
+    <nav class="d-flex gap-3 my-4">
+      <a class="decoration_links" routerLink="/about" routerLinkActive="active">About</a>
+      <a class="decoration_links" routerLink="/skills" routerLinkActive="active">Skills</a>
+      <a class="decoration_links" routerLink="/experience" routerLinkActive="active">Experience</a>
+    </nav>
+
+    <!-- AQUI RENDERIZAN LAS RUTAS -->
+    <router-outlet></router-outlet>
 
   </div>
 </div>

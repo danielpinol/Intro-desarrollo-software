@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { Header } from './components/header/header';
-import { About } from './components/about/about';
-import { Experience } from './components/experience/experience';
-import { EducationSkills } from './components/education-skills/education-skills';
+
 import { DownloadButton } from './components/download-button/download-button';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, About, Experience, EducationSkills, DownloadButton],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, Header, DownloadButton],
   templateUrl: './app.html',
 })
 export class App implements OnInit {
