@@ -1,0 +1,15 @@
+<section class="mb-3">
+  <h2 class="subheader h2 pb-2 mb-1">Proyectos</h2>
+  <div class="row g-4">
+    <div class="col-12" *ngFor="let repo of repos">
+      <div class="card">
+        <div class="exp_title">
+          <h3 class="role">{{ repo.name }}</h3>
+          <span class="time">{{ repo.stargazers_count }}</span>
+        </div>
+        <p class="company">{{ repo.description || 'Sin descripción' }}</p>
+        <a class="decoration_links" [href]="repo.html_url" target="_blank">Ver repositorio</a>
+      </div>
+    </div>
+  </div>
+</section>

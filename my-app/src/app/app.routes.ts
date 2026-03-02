@@ -4,6 +4,8 @@ import { EducationSkills } from './components/education-skills/education-skills'
 import { Experience } from './components/experience/experience';
 import { Jobs } from './components/experience/jobs/jobs';
 import { Studies } from './components/experience/studies/studies';
+import { Projects } from './components/projects/projects';
+import { Football } from './components/football/football';
 
 export const routes: Routes = [
   { path: 'about', component: About },
@@ -16,5 +18,7 @@ export const routes: Routes = [
       { path: 'studies', component: Studies },
     ]
   },
+  { path: 'projects', component: Projects },
+  { path: 'football', component: Football },
   { path: '', redirectTo: 'about', pathMatch: 'full' }
 ];
