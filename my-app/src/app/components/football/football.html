@@ -1,0 +1,12 @@
+<section class="mb-3">
+  <h2 class="subheader h2 pb-2 mb-1">Mi Equipo Favorito</h2>
+  <div class="card" *ngIf="team">
+    <div class="exp_title">
+      <h3 class="role">{{ team.strTeam }}</h3>
+      <span class="time">{{ team.intFormedYear }}</span>
+    </div>
+    <p class="company">{{ team.strLeague }}</p>
+    <p class="list">{{ team.strDescriptionEN | slice:0:200 }}...</p>
+    <img [src]="team.strTeamBadge" alt="escudo" style="width: 80px; margin-top: 10px;">
+  </div>
+</section>
