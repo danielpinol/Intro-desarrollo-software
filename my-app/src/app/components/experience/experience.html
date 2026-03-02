@@ -2,7 +2,7 @@
   <h2 class="subheader h2 pb-2 mb-1 toggle_btns" 
       [class.active]="showExperience" 
       (click)="toggleExperience()">
-    Experiencia Relevante >
+    Experiencia Relevante
   </h2>
 
   <div [class.show]="showExperience" class="toggle_contents">
@@ -32,4 +32,14 @@
       </ul>
     </div>
   </div>
+
+  <!-- NAV RUTAS HIJAS -->
+  <nav class="d-flex gap-3 mt-4">
+    <a class="decoration_links" routerLink="jobs" routerLinkActive="active">Jobs</a>
+    <a class="decoration_links" routerLink="studies" routerLinkActive="active">Studies</a>
+  </nav>
+
+  <!-- AQUI RENDERIZAN LAS RUTAS HIJAS -->
+  <router-outlet></router-outlet>
+
 </section>
