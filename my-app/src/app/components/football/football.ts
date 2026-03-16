@@ -1,21 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { NgIf, SlicePipe } from '@angular/common';
+import { Component, OnInit, inject, signal, ChangeDetectionStrategy } from '@angular/core';
+import { SlicePipe } from '@angular/common';
 import { FootballService } from '../../services/football';
+
+interface Team {
+  strTeam: string;
+  intFormedYear: string;
+  strLeague: string;
+  strDescriptionEN: string;
+}
 
 @Component({
   selector: 'app-football',
-  standalone: true,
-  imports: [NgIf, SlicePipe],
+  imports: [SlicePipe],
   templateUrl: './football.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Football implements OnInit {
-  team: any = null;
+  private footballService = inject(FootballService);
 
-  constructor(private footballService: FootballService) {}
+  team = signal<Team | null>(null);
 
   ngOnInit() {
     this.footballService.getTeam().subscribe(data => {
-      this.team = data.teams[0];
+      const d = data as { teams: Team[] };
+      this.team.set(d.teams[0]);
     });
   }
 }

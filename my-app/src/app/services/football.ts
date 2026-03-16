@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FootballService {
-  private url = 'https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=barcelona';
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) {}
+  private footballUrl = 'https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=barcelona';
 
-  getTeam(): Observable<any> {
-    return this.http.get<any>(this.url);
+  getTeam(): Observable<unknown> {
+    return this.http.get<unknown>(this.footballUrl);
   }
 }
