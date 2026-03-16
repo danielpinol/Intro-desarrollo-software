@@ -1,15 +1,30 @@
 <section class="mb-3">
   <h2 class="subheader h2 pb-2 mb-1">Proyectos</h2>
-  <div class="row g-4">
-    <div class="col-12" *ngFor="let repo of repos">
-      <div class="card">
-        <div class="exp_title">
-          <h3 class="role">{{ repo.name }}</h3>
-          <span class="time">{{ repo.stargazers_count }}</span>
-        </div>
-        <p class="company">{{ repo.description || 'Sin descripción' }}</p>
-        <a class="decoration_links" [href]="repo.html_url" target="_blank">Ver repositorio</a>
+
+  @if (myFirstRepo()) {
+    <h3 class="subheader pb-1">Destacado</h3>
+    <div class="card mb-3">
+      <div class="exp_title">
+        <h3 class="role">{{ myFirstRepo()!.name }}</h3>
+        <span class="time"> {{ myFirstRepo()!.stargazers_count }}</span>
       </div>
+      <p class="company">{{ myFirstRepo()!.description || 'Sin descripción' }}</p>
+      <a class="decoration_links" [href]="myFirstRepo()!.html_url" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
     </div>
+  }
+
+  <div class="row g-4">
+    @for (repo of repos(); track repo.name) {
+      <div class="col-12">
+        <div class="card">
+          <div class="exp_title">
+            <h3 class="role">{{ repo.name }}</h3>
+            <span class="time">{{ repo.stargazers_count }}</span>
+          </div>
+          <p class="company">{{ repo.description || 'Sin descripción' }}</p>
+          <a class="decoration_links" [href]="repo.html_url" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
+        </div>
+      </div>
+    }
   </div>
 </section>

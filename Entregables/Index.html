@@ -3,177 +3,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Piñol CV</title>
+  <title>Daniel Piñol</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 
-<body class = "color_cv container shadow-lg">
-<a href="cv.pdf" download class="download_btn btn position-fixed bottom-0 end-0 m-4 rounded-pill px-4 py-2">
-  DOWNLOAD_PDF
-</a>
+<body class="color_cv">
 
-  <!-- CONTENEDOR PRINCIPAL -->
-  <div class="container py-4">
-    <div class="container_color p-4 p-md-5 shadow-sm rounded-4 container shadow-lg">
+  <a href="cv.pdf" download class="download_btn btn position-fixed bottom-0 end-0 m-4 rounded-pill px-4 py-2">
+    Download PDF
+  </a>
 
-      <!--PUNTITOS DE DECORACION-->
+  <div class="container py-5">
+    <div class="container_color p-4 p-md-5 rounded-4 shadow-lg">
+
+      <!-- TOPBAR -->
       <div class="topbar">
-        <span class="color_dots"></span>
-        <span class="color_dots"></span>
-        <span class="color_dots"></span>
+        <div class="dots_group">
+          <span class="color_dots"></span>
+          <span class="color_dots"></span>
+          <span class="color_dots"></span>
+        </div>
+        <button id="dark_mode" class="mode_btn">Light mode</button>
       </div>
 
-      <!--BARRA DE DECORACION-->
+      <!-- BARRA DE SALUDO -->
       <div class="decoration_bar"></div>
 
-
       <!-- HEADER -->
-  <div class="text-center mb-5">
-      
-      <h1 class="title code_font mb-2">
-        DANIEL_PIÑOL<span class="cursor"></span>
-      </h1>
+      <header class="cv_header mb-5">
+        <h1 class="title">DANIEL PIÑOL<span class="cursor"></span></h1>
+        <p class="subtitle">Computer Science · Universidad Francisco Marroquín</p>
+        <div class="divisor"></div>
+        <nav class="contact_row">
+          <a class="contact_link" href="mailto:daniel.pinol@ufm.edu">✉ daniel.pinol@ufm.edu</a>
+          <span class="contact_sep">·</span>
+          <a class="contact_link" href="https://github.com/danielpinol" target="_blank">⌥ GitHub</a>
+          <span class="contact_sep">·</span>
+          <a class="contact_link" href="https://www.linkedin.com/" target="_blank">in LinkedIn</a>
+        </nav>
+      </header>
 
-      <!-- LINEA DE DIVISION -->
-      <div class="divisor mb-4"></div>
-
-
-      <!-- LINKS -->
-       <button class="toggle_btn">
-        Contact
-       </button>
-      <div class="toggle_content">
-      <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a class="decoration_links" href="mailto:daniel.pinol@ufm.edu">mail</a>
-        <a class="decoration_links" href="https://github.com/danielpinol" target="_blank">gitHub profile</a>
-        <a class="decoration_links" href="https://www.linkedin.com/" target="_blank">linkedin</a>
-      </div>
-  </div>
-  </div>
-  <button id="dark_mode" class="decoration_links dark_light_btn">
-    Dark mode
-  </button>
-
-      <!-- ACERCA DE MÍ + FOTO -->
-      <div class="row g-4 align-items-start mb-1">
-
-        <div class="col-12 col-md-8">
-          <h2 class="subheader h2 pb-2 mb-1">Acerca de mí</h2>
-          <div class="panel">
-          <p class="fs-4 text_justify mb-0">
-            Joven motivado y altamente disciplinado con una sólida trayectoria en el fútbol desde los 4 años.
-            Mi experiencia en el deporte me ha enseñado el valor del trabajo en equipo, la perseverancia y la
-            capacidad para enfrentar desafíos con una actitud positiva. Me apasiona aprender y mejorar
-            constantemente, con una mentalidad orientada a resultados y crecimiento profesional.
-          </p>
-          </div>
+      <!-- 01 · ACERCA DE MÍ -->
+      <section class="mb-5">
+        <div class="section_header mb-3">
+          <span class="section_num">01</span>
+          <h2 class="section_label">Acerca de mí</h2>
         </div>
-
-        <div class="col-12 col-md-4">
-          <div class="color_cv photo_border_decoration">
-            <img
-              src="https://raw.githubusercontent.com/danielpinol/Intro-desarrollo-software/Entregable2/Entregable1/Foto_Personal.jpg"
-              alt="Foto personal"
-              class="img-fluid rounded-4">
-          </div>
-        </div>
-
-      </div>
-
-      
-      <!-- EXPERIENCIA RELEVANTE -->
-  <section class="mb-3">
-    <h2 class="subheader h2 pb-2 mb-1 toggle_btns">Experiencia Relevante</h2>
-    <div class="card">
-      <div class="toggle_contents">
-          <div class="exp_title">
-            <h3 class="role">Entrenador de Fútbol</h3>
-            <p class = "time"> 6 meses</p>
-          </div>
-      
-
-          <p class="company">Global Sports Corporation / Global Soccer Academy</p>
-          <ul class="list">
-            <li>Entrenador en academia trabajando con niños.</li>
-            <li>Gestión de dos equipos distintos.</li>
-            <li>Desarrollo de disciplina, técnica y trabajo en equipo.</li>
-          </ul>
-        </div>
-         
-
-        
-          <div class="card">
-            <div class="exp_title">
-              <h3 class="role">Modelo para anuncios publicitarios</h3>
-              <span class="time">2015 - 2018</span>
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-md-8">
+            <div class="panel">
+              <p class="mb-0 body_text text_justify">
+                Joven motivado y altamente disciplinado con una sólida trayectoria en el fútbol desde los 4 años.
+                Mi experiencia en el deporte me ha enseñado el valor del trabajo en equipo, la perseverancia y la
+                capacidad para enfrentar desafíos con una actitud positiva. Me apasiona aprender y mejorar
+                constantemente, con una mentalidad orientada a resultados y crecimiento profesional.
+              </p>
             </div>
-          
-          <p class="company">Fashion Icons / Marcela Tanchez</p>
-          <ul class="list">
-            <li>Participación en campañas publicitarias para marcas locales.</li>
-            <li>Trabajo bajo lineamientos de marca y tiempos de producción.</li>
-            <li>Colaboración con equipos creativos.</li>
-          </ul>
           </div>
-          </div> 
-  </section>
-
-      <!-- EDUCACIÓN -->
-      <section class="mb-3">
-        <h2 class="subheader h2 pb-2 mb-1">Educación</h2>
-      <div class="card">
-        <div class="mb-3">
-          <h3 class="role">Bachiller en Ciencias y Letras</h3>
-          <p class="company">Colegio Internacional Montessori, Guatemala</p>
-          <span class="text-muted">Graduado · 2023</span>
+          <div class="col-12 col-md-4">
+            <div class="photo_border_decoration">
+              <img
+                src="https://raw.githubusercontent.com/danielpinol/Intro-desarrollo-software/Entregable2/Entregable1/Foto_Personal.jpg"
+                alt="Foto personal"
+                class="img-fluid rounded-3">
+            </div>
+          </div>
         </div>
-
-        <div>
-          <h3 class="role">Licenciatura en Ingeniería en Computer Science</h3>
-          <p class="company">Universidad Francisco Marroquín</p>
-          <span class="text-muted">En curso · 2025 – Actualidad</span>
-        </div>
-      </div>
       </section>
 
-      <!-- SKILLS Y CERTIFICACIONES -->
+      <!-- 02 · EXPERIENCIA RELEVANTE -->
+      <section class="mb-5">
+        <div class="section_header toggle_btns mb-3">
+          <span class="section_num">02</span>
+          <h2 class="section_label">Experiencia Relevante</h2>
+        </div>
+        <div class="toggle_contents">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <div class="card h-100">
+                <div class="exp_title">
+                  <h3 class="role">Entrenador de Fútbol</h3>
+                  <span class="time">6 meses</span>
+                </div>
+                <p class="company">Global Sports Corporation · Global Soccer Academy</p>
+                <ul class="list">
+                  <li>Entrenador en academia trabajando con niños.</li>
+                  <li>Gestión de dos equipos distintos.</li>
+                  <li>Desarrollo de disciplina, técnica y trabajo en equipo.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card h-100">
+                <div class="exp_title">
+                  <h3 class="role">Modelo publicitario</h3>
+                  <span class="time">2015 – 2018</span>
+                </div>
+                <p class="company">Fashion Icons · Marcela Tanchez</p>
+                <ul class="list">
+                  <li>Participación en campañas para marcas locales.</li>
+                  <li>Trabajo bajo lineamientos de marca y tiempos de producción.</li>
+                  <li>Colaboración con equipos creativos.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 · EDUCACIÓN -->
+      <section class="mb-5">
+        <div class="section_header mb-3">
+          <span class="section_num">03</span>
+          <h2 class="section_label">Educación</h2>
+        </div>
+        <div class="card">
+          <div class="edu_item">
+            <div class="exp_title">
+              <h3 class="role">Bachiller en Ciencias y Letras</h3>
+              <span class="time">Graduado · 2023</span>
+            </div>
+            <p class="company mb-0">Colegio Internacional Montessori, Guatemala</p>
+          </div>
+          <div class="edu_item">
+            <div class="exp_title">
+              <h3 class="role">Licenciatura en Ingeniería en Computer Science</h3>
+              <span class="time">En curso · 2025 – Actualidad</span>
+            </div>
+            <p class="company mb-0">Universidad Francisco Marroquín</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 · SKILLS Y CERTIFICACIONES -->
       <section>
-        <h2 class="subheader h2 pb-2 mb-1">Skills & Certificaciones</h2>
+        <div class="section_header mb-3">
+          <span class="section_num">04</span>
+          <h2 class="section_label">Skills & Certificaciones</h2>
+        </div>
         <input
           id="skillSearch"
           type="text"
-          class="form-control mb-3"
+          class="form-control mb-4"
           placeholder="Buscar skill..."
         />
-
         <div class="row g-4">
-
           <div class="col-12 col-md-6">
-            <h3 class="h4 fw-bold mb-1">Skills</h3>
-            <ul id="skillsList" class = "fs-5">
-              <li>Programación</li>
-              <li>Microsoft Office</li>
-              <li>Trabajo en equipo</li>
-              <li>Liderazgo</li>
-              <li>Inteligencia Artificial</li>
-            </ul>
+            <p class="tags_label mb-3">Skills</p>
+            <div id="skillsList" class="d-flex flex-wrap gap-2">
+              <span class="skill_tag">Programación</span>
+              <span class="skill_tag">Microsoft Office</span>
+              <span class="skill_tag">Trabajo en equipo</span>
+              <span class="skill_tag">Liderazgo</span>
+              <span class="skill_tag">Inteligencia Artificial</span>
+            </div>
           </div>
-
           <div class="col-12 col-md-6">
-            <h3 class="h4 fw-bold mb-1">Certificaciones</h3>
-            <ul class = "fs-5">
-              <li>Microsoft Power BI</li>
-              <li>Microsoft Excel</li>
-            </ul>
+            <p class="tags_label mb-3">Certificaciones</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="cert_tag">Microsoft Power BI</span>
+              <span class="cert_tag">Microsoft Excel</span>
+            </div>
           </div>
-
         </div>
       </section>
+
     </div>
   </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

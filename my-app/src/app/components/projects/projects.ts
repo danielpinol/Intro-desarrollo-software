@@ -1,21 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
-import { GithubService } from '../../services/github';
+import { Component, OnInit, inject, signal, ChangeDetectionStrategy } from '@angular/core';
+import { GithubService, GithubRepo } from '../../services/github';
 
 @Component({
   selector: 'app-projects',
-  standalone: true,
-  imports: [NgFor],
+  imports: [],
   templateUrl: './projects.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Projects implements OnInit {
-  repos: any[] = [];
+  private githubService = inject(GithubService);
 
-  constructor(private githubService: GithubService) {}
+  repos = signal<GithubRepo[]>([]);
+  myFirstRepo = signal<GithubRepo | null>(null);
 
   ngOnInit() {
     this.githubService.getRepos().subscribe(data => {
-      this.repos = data;
+      this.repos.set(data);
+    });
+
+    this.githubService.getMyFirstRepo().subscribe(data => {
+      this.myFirstRepo.set(data);
     });
   }
 }

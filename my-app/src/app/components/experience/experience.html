@@ -1,45 +1,49 @@
-<section class="mb-3">
-  <h2 class="subheader h2 pb-2 mb-1 toggle_btns" 
-      [class.active]="showExperience" 
-      (click)="toggleExperience()">
-    Experiencia Relevante
-  </h2>
+<section>
+  <div class="section_header toggle_btns"
+       [class.active]="showExperience"
+       (click)="toggleExperience()">
+    <span class="section_num">02</span>
+    <h2 class="section_label">Experiencia Relevante</h2>
+  </div>
 
-  <div [class.show]="showExperience" class="toggle_contents">
-    <div class="card">
-      <div class="exp_title">
-        <h3 class="role">Entrenador de Fútbol</h3>
-        <p class="time">6 meses</p>
+  <div class="toggle_contents" [class.show]="showExperience">
+    <div class="row g-3">
+      <div class="col-12 col-md-6">
+        <div class="card h-100">
+          <div class="exp_title">
+            <h3 class="role">Entrenador de Fútbol</h3>
+            <span class="time">6 meses</span>
+          </div>
+          <p class="company">Global Sports Corporation · Global Soccer Academy</p>
+          <ul class="list">
+            <li>Entrenador en academia trabajando con niños.</li>
+            <li>Gestión de dos equipos distintos.</li>
+            <li>Desarrollo de disciplina, técnica y trabajo en equipo.</li>
+          </ul>
+        </div>
       </div>
-      <p class="company">Global Sports Corporation / Global Soccer Academy</p>
-      <ul class="list">
-        <li>Entrenador en academia trabajando con niños.</li>
-        <li>Gestión de dos equipos distintos.</li>
-        <li>Desarrollo de disciplina, técnica y trabajo en equipo.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="exp_title">
-        <h3 class="role">Modelo para anuncios publicitarios</h3>
-        <span class="time">2015 - 2018</span>
+      <div class="col-12 col-md-6">
+        <div class="card h-100">
+          <div class="exp_title">
+            <h3 class="role">Modelo publicitario</h3>
+            <span class="time">2015 – 2018</span>
+          </div>
+          <p class="company">Fashion Icons · Marcela Tanchez</p>
+          <ul class="list">
+            <li>Participación en campañas para marcas locales.</li>
+            <li>Trabajo bajo lineamientos de marca y tiempos de producción.</li>
+            <li>Colaboración con equipos creativos.</li>
+          </ul>
+        </div>
       </div>
-      <p class="company">Fashion Icons / Marcela Tanchez</p>
-      <ul class="list">
-        <li>Participación en campañas publicitarias para marcas locales.</li>
-        <li>Trabajo bajo lineamientos de marca y tiempos de producción.</li>
-        <li>Colaboración con equipos creativos.</li>
-      </ul>
     </div>
   </div>
 
-  <!-- NAV RUTAS HIJAS -->
-  <nav class="d-flex gap-3 mt-4">
-    <a class="decoration_links" routerLink="jobs" routerLinkActive="active">Jobs</a>
-    <a class="decoration_links" routerLink="studies" routerLinkActive="active">Studies</a>
+  <!-- Subrutas: Jobs / Studies -->
+  <nav class="d-flex gap-2 mt-4">
+    <a class="nav_link" routerLink="jobs"    routerLinkActive="active">Jobs</a>
+    <a class="nav_link" routerLink="studies" routerLinkActive="active">Studies</a>
   </nav>
-
-  <!-- AQUI RENDERIZAN LAS RUTAS HIJAS -->
   <router-outlet></router-outlet>
 
 </section>

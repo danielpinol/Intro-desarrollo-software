@@ -1,28 +1,35 @@
 <app-download-button></app-download-button>
 
 <div class="container py-4">
-  <div class="container_color p-4 p-md-5 shadow-sm rounded-4 container shadow-lg">
+  <div class="container_color p-4 p-md-5 rounded-4 shadow-lg">
 
+    <!-- TOPBAR: puntos + botón modo -->
     <div class="topbar">
-      <span class="color_dots"></span>
-      <span class="color_dots"></span>
-      <span class="color_dots"></span>
+      <div class="dots_group">
+        <span class="color_dots"></span>
+        <span class="color_dots"></span>
+        <span class="color_dots"></span>
+      </div>
+      <button class="mode_btn" (click)="toggleDarkMode()">
+        {{ isDarkMode ? 'Light mode' : 'Dark mode' }}
+      </button>
     </div>
 
+    <!-- BARRA DE SALUDO -->
     <div class="decoration_bar">{{ barMessage }}</div>
 
+    <!-- HEADER (título + contacto) -->
     <app-header></app-header>
 
-    <!-- NAVEGACION -->
-    <nav class="d-flex gap-3 my-4">
-      <a class="decoration_links" routerLink="/about" routerLinkActive="active">About</a>
-      <a class="decoration_links" routerLink="/skills" routerLinkActive="active">Skills</a>
-      <a class="decoration_links" routerLink="/experience" routerLinkActive="active">Experience</a>
-      <a class="decoration_links" routerLink="/projects" routerLinkActive="active">Projects</a>
-      <a class="decoration_links" routerLink="/football" routerLinkActive="active">Football</a>
+    <!-- NAVEGACIÓN tabs -->
+    <nav class="main_nav">
+      <a class="nav_link" routerLink="/about"      routerLinkActive="active">About</a>
+      <a class="nav_link" routerLink="/skills"     routerLinkActive="active">Skills</a>
+      <a class="nav_link" routerLink="/experience" routerLinkActive="active">Experience</a>
+      <a class="nav_link" routerLink="/projects"   routerLinkActive="active">Projects</a>
+      <a class="nav_link" routerLink="/football"   routerLinkActive="active">Soccer</a>
     </nav>
 
-    <!-- AQUI RENDERIZAN LAS RUTAS -->
     <router-outlet></router-outlet>
 
   </div>
