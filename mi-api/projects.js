@@ -84,6 +84,18 @@ app.patch('/education/:id', (req, res) => {
   res.json(educations[index]);
 });
 
+// DELETE /education/:id - Eliminar un estudio
+app.delete('/education/:id', (req, res) => {
+  const index = educations.findIndex(e => e.id === parseInt(req.params.id));
+
+  if (index === -1) {
+    return res.status(404).json({ error: 'Educación no encontrada' });
+  }
+
+  const deleted = educations.splice(index, 1)[0];
+  res.json({ message: 'Educación eliminada', deleted });
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
