@@ -68,6 +68,22 @@ app.post('/education', (req, res) => {
   res.status(201).json(newEducation);
 });
 
+// PATCH /education/:id - Actualizar un estudio parcialmente
+app.patch('/education/:id', (req, res) => {
+  const index = educations.findIndex(e => e.id === parseInt(req.params.id));
+
+  if (index === -1) {
+    return res.status(404).json({ error: 'Educación no encontrada' });
+  }
+
+  if (!req.body || Object.keys(req.body).length === 0) {
+    return res.status(422).json({ error: 'Se requiere al menos un campo para actualizar' });
+  }
+
+  educations[index] = { ...educations[index], ...req.body };
+  res.json(educations[index]);
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
