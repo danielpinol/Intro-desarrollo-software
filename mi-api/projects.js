@@ -46,6 +46,28 @@ app.get('/education/:id', (req, res) => {
   res.json(education);
 });
 
+// POST /education - Crear un nuevo estudio
+app.post('/education', (req, res) => {
+  const { institution, degree, field, startYear, endYear, status } = req.body;
+
+  if (!institution || !degree || !field || !startYear) {
+    return res.status(422).json({ error: 'Campos requeridos: institution, degree, field, startYear' });
+  }
+
+  const newEducation = {
+    id: educations.length + 1,
+    institution,
+    degree,
+    field,
+    startYear,
+    endYear: endYear || null,
+    status: status || 'En curso'
+  };
+
+  educations.push(newEducation);
+  res.status(201).json(newEducation);
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
